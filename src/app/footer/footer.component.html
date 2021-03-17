@@ -1,0 +1,14 @@
+<p>footer works!</p>
+<!-- <form #progradForm="ngForm"> -->
+    <form #progradForm="ngForm" (ngSubmit)="onSubmit()">
+    <label>Name</label>
+    <input type="text" name="name"[(ngModel)]="newprograd.name"><br>
+    <label>Email</label>
+    <input type="email" name="email">
+    <select>
+        <option *ngFor ="let i of topics">{{i}}</option>
+        <!-- <option>Angular</option>
+        <option>Angular</option> -->
+    </select>
+    <button type="submit">Submit</button>
+</form>
